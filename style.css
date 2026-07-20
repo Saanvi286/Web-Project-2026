@@ -1,0 +1,305 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0; /*Removes outer spacing*/
+  padding: 0;
+  overflow: hidden; /*Fixes background color wrapping around floated items*/
+  background-color: #161f41; /* Navy accent theme background color style */
+}
+
+ul.nav li {
+  float: left;
+}
+
+ul.nav li.right {
+  float: right;
+}
+
+ul.nav li.right a {
+  display: block;
+  color: rgb(244, 244, 244);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.nav li a {
+  display: block;
+  color: rgb(244, 244, 244);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.nav li a:hover { /* Changed the background color of the navigation bar when hovered over */
+  background-color: #303f67;
+}
+
+.hero-section, .two-column { /* A section with a hero image and text, and a two-column layout for the main content */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 5%;
+  margin-right: auto;
+  max-width: 1000px;
+  padding: 0 15px;
+}
+
+.hero-text h1 {
+  font-size: 3rem; 
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.hero-text p {
+  color: #333;
+  line-height: 1.4;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+  display: block;
+  border-radius: 12px;
+}
+
+.two-column {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.two-column .info {
+  flex: 1.2; /* Allows the info section to take up more space than the images section */
+}
+
+.two-column .images {
+  flex: 1;
+}
+
+.two-column .info h2 {
+  font-size: 2.8rem;
+  margin: 0 0 10px 0;
+  color: #000;
+}
+
+.two-column .info h3 {
+  font-size: 1.4rem;
+  margin: 0 0 25px 0;
+  color: #000;
+}
+
+.two-column .images img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.two-column .info p {
+  color: #333;
+  line-height: 1.5;
+  font-size: 1.05rem; 
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.page-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #d1d1d4;
+  margin-bottom: 40px;
+}
+
+.page-header h1 { /*Heading style inside the page banner */
+  font-size: 2.5rem;
+  color: #161f41;
+  margin-bottom: 10px; /*Gap beneath main title */
+  margin-top: 0; /*Removes top margin */
+}
+
+.page-header p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+
+.type-row {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  background: #1d1e46;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #000000;
+  overflow: hidden;
+  align-items: center;
+}
+
+.type-row:nth-child(even) { /* Swaps the image and text sides on every second card*/
+  flex-direction: row-reverse; /* Flips the order so the image goes on the right  */
+}
+
+
+.type-image {
+  flex: 1;
+  min-width: 40%;
+  height: 320px;
+}
+
+.type-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fills 320px height without stretching   */
+  display: block; /* Removes inline white space below image */
+}
+
+.type-info {
+  flex: 1.5;
+  padding: 40px;
+  color:#ffffff
+}
+
+.type-info h2 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  border-bottom: 3px solid #ffffff; /* Adds a solid white underline border beneath title */
+  padding-bottom: 5px;
+  display: inline-block; /* keeps underline length equal to text width*/
+}
+
+.type-info p {
+  line-height: 1.6; /* Spaced line height for easy reading */
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.type-info strong {
+  color: #ffffff;
+}
+
+.pathway-row {
+  display: flex;
+  max-width: 1000px; /* Caps card width at 1000px */
+  margin-top: 0;
+  margin-bottom: 40px;
+  margin-left: 5%;
+  margin-right: auto;
+  background: #1d1e46;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #000000; /* Adds drop shadow effect*/
+  overflow: hidden;
+  align-items: stretch; /* Stretches both sides to match equal height  */
+}
+
+.pathway-row:nth-child(even) { /* Swaps the image and text sides on every second card*/
+  flex-direction: row-reverse; /* Flips the order so the image goes on the right  */
+}
+
+.pathway-image-box {
+  flex: 1;
+  width: 50%;
+}
+
+.pathway-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pathway-text-box {
+  flex: 1; /* Takes up 1 equal share of space */
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column; /* Stacks text elements vertically (top to bottom) */
+  justify-content: center; 
+}
+
+.pathway-text-box h2 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 5px; /*Gap between heading text and border line*/
+  display: inline-block;
+}
+
+.pathway-text-box p {
+  line-height: 1.6;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.05rem; /*Paragraph font size */
+}
+
+.pathway-text-box strong { /* Bold text style for emphasis */
+  color: #ffffff;
+}
+
+.hero-pathway {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /*Centers content vertically*/
+}
+
+.hero-overlay-text {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.hero-overlay-text h1 {
+  color: #161f41; /* Navy accent theme text color style */
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.kaitiakitanga-section {
+  margin-top: 40px; /*Adds 40px gap above section*/
+  margin-bottom: 40px; /*Adds 40px gap below section*/
+  margin-left: 5%;
+  margin-right: auto;
+  max-width: 1000px;
+  padding: 0 15px; /*Adds 15px padding on left and right sides of section */
+}
+
+.kaitiakitanga-section h2 { /*Large heading for the Kaitiakitanga section with bold text and a dark color */
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #000;
+  font-weight: bold;
+}
+
+.kaitiakitanga-section p {
+  color: #333; /* Dark gray text color for better readability */
+  line-height: 1.5;
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+.kaitiakitanga-section img {
+  width: 100%; /* Ensure the image takes up the full width of its container */
+  height: auto;
+  display: block;
+  border-radius: 12px; /* Rounded corners for the image */
+}
